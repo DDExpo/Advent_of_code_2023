@@ -1,8 +1,10 @@
 
 
+# Only final solution - for part two is remained
+
+
 SYMBOLS: set[str] = set(',+-=@!.&$%#/')
 SUM_ENGINE_NUMS: int = 0
-skip: int = 0
 
 
 file = open('Adventofcode/data/input_day_3.txt', 'r').read().splitlines()

@@ -1,5 +1,8 @@
 
 
+# Only final solution - for part two is remained
+
+
 DICT = {'o': {'n': {'e': 'L'}}, 't': {'w': {'o': 'L'},
                                       'h': {'r': {'e': {'e': 'L'}}}},
         'f': {'o': {'u': {'r': 'L'}}, 'i': {'v': {'e': 'L'}}},

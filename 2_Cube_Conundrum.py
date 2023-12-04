@@ -1,5 +1,8 @@
 
 
+# Only final solution - for part two is remained
+
+
 with open('Adventofcode/data/input_day_2.txt', 'r') as file:
     sum_max_cubes: int = 0
 
