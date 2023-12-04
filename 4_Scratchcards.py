@@ -3,32 +3,31 @@
 SUM_WINNING_CARDS: int = 0
 
 
-def first_round(win_nums: list[str], nums: list[str]) -> None:
-    global SUM_WINNING_CARDS
-    count: list[int] = [0] * 100
-    total: int = 0
-
-    for num in nums:
-        count[int(num)] += 1
-
-    for w_num in win_nums:
-        count[int(w_num)] += 1
-        if count[int(w_num)] >= 2:
-            if total == 0:
-                total += 1
-            else:
-                total *= 2
-
-    SUM_WINNING_CARDS += total
-    return
-
-
 with open('Adventofcode/data/input_day_4.txt', 'r') as file:
 
     num_wins: list[int] = [1] * 202
     for i, line in enumerate(file):
         line = line.lstrip('Card ').rstrip('\n').split('|')
         winning_nums, nums = line[0].split()[1:], line[1].split()
+
+        def first_round(win_nums: list[str], nums: list[str]) -> None:
+            global SUM_WINNING_CARDS
+            count: list[int] = [0] * 100
+            total: int = 0
+
+            for num in nums:
+                count[int(num)] += 1
+
+            for w_num in win_nums:
+                count[int(w_num)] += 1
+                if count[int(w_num)] >= 2:
+                    if total == 0:
+                        total += 1
+                    else:
+                        total *= 2
+
+            SUM_WINNING_CARDS += total
+            return
 
         # this slow as fuck
         def second_round(win_nums: list[str], nums: list[str], i: int) -> None:
