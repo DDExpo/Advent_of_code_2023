@@ -7,3 +7,4 @@
 ##### - [Day 3: Gear Ratios](3_Gear_Ratios.py) 🌟🌟
 ##### - [Day 4: Scratchcards](4_Scratchcards.py) 🌟🌟
 ##### - [Day 5: If You Give A Seed A Fertilizer](5_If_You_Give_A_Seed_A_Fertilizer.py) 🌟🌟
+##### - [Day 6: Wait For It](6_Wait_For_It.py) 🌟🌟
