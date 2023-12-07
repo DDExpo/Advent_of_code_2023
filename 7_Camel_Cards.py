@@ -1,5 +1,4 @@
 from collections import Counter
-from pprint import pprint
 
 
 # Part Two: switch priority of 'J'
@@ -57,7 +56,6 @@ file = open('Advent_of_code_2023/data/input_day_7.txt',
             'r').read().splitlines()
 
 sorted_cards: list[tuple[int, int]] = sort_cards(file)
-pprint(sorted_cards, width=120, compact=True)
 
 result: int = 0
 index: int = 0
