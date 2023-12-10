@@ -9,3 +9,6 @@
 ##### - [Day 5: If You Give A Seed A Fertilizer](5_If_You_Give_A_Seed_A_Fertilizer.py) 🌟🌟
 ##### - [Day 6: Wait For It](6_Wait_For_It.py) 🌟🌟
 ##### - [Day 7: Camel Cards](7_Camel_Cards.py) 🌟🌟
+##### - [Day 8: Haunted Wasteland](8_Haunted_Wasteland.py) 🌟🌟
+##### - [Day 9: Mirage Maintenance](9_Mirage_Maintenance.py) 🌟🌟
+##### - [Day 10: Pipe Maze](10_Pipe_Maze.py) 🌟🌟
