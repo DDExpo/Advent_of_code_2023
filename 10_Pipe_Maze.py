@@ -1,12 +1,10 @@
+from collections import deque
 
 
-from pprint import pprint
-
-
-MAP_OF_PILES: dict[str: tuple[int, int]] = {
-    '|': (1, 0), '-': (0, 1), 'L': (0, +1), 'J': (+1, 0),
-    '7': (0, -1), 'F': (-1, 0), '.': (0, 0)
-}
+PILES_DOWN: set[str] = 'S|JL'
+PILES_UP: set[str] = 'S|7F'
+PILES_LEFT: set[str] = 'S-J7'
+PILES_RIGHT: set[str] = 'S-LF'
 
 
 def read_input() -> list[list[str]]:
@@ -30,24 +28,46 @@ def find_S(grid) -> tuple[int, int]:
 
 def first_round(grid: list[list[str]]) -> int:
 
+    # Thanks to HyperNeutrino
+
     start = find_S(grid)
 
-    mouse1 = (start[0]+1, start[1])
-    mouse2 = (start[0], start[1]-1)
-    mouse3 = (start[0]+1, start[1]+1)
+    queue = deque([start])
+    seen: set[tuple[int, int]] = set()
 
-    steps: int = 1
+    seen.add(start)
 
-    while mouse1 != mouse2 != mouse3:
+    while queue:
 
-        mouse1 = MAP_OF_PILES[grid[mouse1[0]][mouse1[1]]]
-        mouse2 = (start[0], start[1]-1)
-        mouse3 = (start[0]+1, start[1]+1)
-        steps += 1
+        ver, hor = queue.popleft()
+        curr_char = grid[ver][hor]
+
+        if (ver > 0 and curr_char in PILES_DOWN and
+           grid[ver-1][hor] in '|7F' and (ver-1, hor) not in seen):
+            seen.add((ver-1, hor))
+            queue.append((ver-1, hor))
+
+        if (ver < len(grid) - 1 and curr_char in PILES_UP and
+           grid[ver+1][hor] in '|JL' and (ver+1, hor) not in seen):
+            seen.add((ver+1, hor))
+            queue.append((ver+1, hor))
+
+        if (hor > 0 and curr_char in PILES_LEFT and
+           grid[ver][hor-1] in '-LF' and (ver, hor-1) not in seen):
+            seen.add((ver, hor-1))
+            queue.append((ver, hor-1))
+
+        if (hor < len(grid[ver]) - 1 and curr_char in PILES_RIGHT and
+           grid[ver][hor+1] in '-J7' and (ver, hor+1) not in seen):
+            seen.add((ver, hor+1))
+            queue.append((ver, hor+1))
+
+    return len(seen) // 2
+
 
 def second_round(grid: list[list[str]]) -> int:
     pass
 
 
 print(first_round(read_input()))
-print(second_round(read_input()))
+# print(second_round(read_input()))

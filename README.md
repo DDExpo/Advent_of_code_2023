@@ -12,3 +12,4 @@
 ##### - [Day 8: Haunted Wasteland](8_Haunted_Wasteland.py) 🌟🌟
 ##### - [Day 9: Mirage Maintenance](9_Mirage_Maintenance.py) 🌟🌟
 ##### - [Day 10: Pipe Maze](10_Pipe_Maze.py) 🌟🌟
+##### - [Day 11: Cosmic Expansion](11_Cosmic_Expansion.py) 🌟🌟
