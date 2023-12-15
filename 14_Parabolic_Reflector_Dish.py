@@ -1,9 +1,14 @@
-
-
 from pprint import pprint
 
 
-def roted_the_wall_text(wall: list[list[str]]) -> tuple[list[list[str]], int]:
+def rotate_the_wall_part_one():
+
+    wall: list[list[str]] = []
+
+    with open('Advent_of_code_2023/data/input_day_14.txt', 'r') as file:
+
+        for line in file:
+            wall.append(list(line.strip()))
 
     rocks: list[int] = [0] * len(wall[0])
     result: int = 0
@@ -42,35 +47,66 @@ def roted_the_wall_text(wall: list[list[str]]) -> tuple[list[list[str]], int]:
                 rocks[j] += 1
 
     wall = [''.join(wall_level) for wall_level in wall]
-    z = 0
 
-    for s in wall:
-        z += s.count('O')
-
-    print(z)
-
-    return (wall, result)
+    print(result)
+    pprint(wall)
 
 
-def first_part(rotated_wall: list[str]) -> int:
-    pass
+def HyperNeutrino_solution_part_one():
+
+    wall = open('Advent_of_code_2023/data/test.txt').read().splitlines()
+    # rotated the wall at 90 degree, so north now is right
+    new_wall = list(map(''.join, zip(*wall)))
+    pprint(list(zip(new_wall, wall)), compact=True, width=34)
+
+    new_wall = ['#'.join([''.join(sorted(list(group), reverse=True)) for group
+                          in row.split('#')]) for row in new_wall]
+    print('__________________________________')
+
+    pprint(list(zip(new_wall, wall)), compact=True, width=34)
+    new_wall = list(map(''.join, zip(*new_wall)))
+
+    print(sum(row.count('O') * (len(new_wall) - index)
+              for index, row in enumerate(new_wall)))
 
 
-def second_part():
-    pass
+wall = tuple(open(
+    'Advent_of_code_2023/data/input_day_14.txt'
+).read().splitlines())
 
 
-wall: list[list[str]] = []
+def HyperNeutrino_solution_part_two():
 
-with open('Advent_of_code_2023/data/input_day_14.txt', 'r') as file:
+    global wall
 
-    for line in file:
-        wall.append(list(line.strip()))
+    def cycle():
+        global wall
+        for _ in range(4):
+            wall = tuple(map(''.join, zip(*wall)))
+            wall = tuple('#'.join([''.join(sorted(tuple(group), reverse=True))
+                         for group in row.split('#')]) for row in wall)
+            wall = tuple(row[::-1] for row in wall)
 
-rotated_wall, result = roted_the_wall_text(wall)
+    seen: set[tuple[str]] = {wall}
+    array: list[tuple[str]] = [wall]
+    iter: int = 0
 
-# print(first_part(rotated_wall))
-# print(second_part(rotated_wall))
+    while True:
+        iter += 1
+        cycle()
+        if wall in seen:
+            break
+        seen.add(wall)
+        array.append(wall)
 
-pprint(rotated_wall)
-print(result)
+    start = array.index(wall)
+    print(iter, start)
+    wall = array[(1000000000 - start) % (iter - start) + start]
+
+    print(sum(row.count('O') * (len(wall) - index)
+              for index, row in enumerate(wall)))
+
+
+rotate_the_wall_part_one()
+HyperNeutrino_solution_part_one()
+HyperNeutrino_solution_part_two()
