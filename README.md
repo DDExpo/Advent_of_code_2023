@@ -16,4 +16,4 @@
 ##### - [Day 12: Hot Springs](12_Hot_Springs.py) 🌟🌟
 ##### - [Day 13: Point of Incidence](13_Point_of_Incidence.py) 🌟🌟
 ##### - [Day 14: Parabolic Reflector Dish](14_Parabolic_Reflector_Dish.py) 🌟🌟
-##### - [Day 15: Lens Library](15_Lens_Library.py) 
+##### - [Day 15: Lens Library](15_Lens_Library.py) 🌟🌟
