@@ -18,3 +18,4 @@
 ##### - [Day 14: Parabolic Reflector Dish](14_Parabolic_Reflector_Dish.py) 🌟🌟
 ##### - [Day 15: Lens Library](15_Lens_Library.py) 🌟🌟
 ##### - [Day 16: The Floor Will Be Lava](16_The_Floor_Will_Be_Lava.py) 🌟🌟
+##### - [Day 16: Clumsy Crucible](17_Clumsy_Crucible.py) 🌟🌟
