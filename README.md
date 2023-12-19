@@ -20,3 +20,4 @@
 ##### - [Day 16: The Floor Will Be Lava](16_The_Floor_Will_Be_Lava.py) 🌟🌟
 ##### - [Day 17: Clumsy Crucible](17_Clumsy_Crucible.py) 🌟🌟
 ##### - [Day 18: Lavaduct Lagoon](18_Lavaduct_Lagoon.py) 🌟🌟
+##### - [Day 19: Aplenty](19_Aplenty.py) 🌟
