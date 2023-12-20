@@ -21,3 +21,4 @@
 ##### - [Day 17: Clumsy Crucible](17_Clumsy_Crucible.py) 🌟🌟
 ##### - [Day 18: Lavaduct Lagoon](18_Lavaduct_Lagoon.py) 🌟🌟
 ##### - [Day 19: Aplenty](19_Aplenty.py) 🌟
+##### - [Day 20: Pulse Propagation](20_Pulse_Propagation.py) 🌟
