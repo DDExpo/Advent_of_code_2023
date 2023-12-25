@@ -23,7 +23,7 @@
 ##### - [Day 19: Aplenty](19_Aplenty.py) 🌟
 ##### - [Day 20: Pulse Propagation](20_Pulse_Propagation.py) 🌟
 ##### - [Day 21: Step Counter](21_Step_Counter.py) 🌟
-<img src='./mem.jpg'  width='350' height='450'>
+<img src='./mem.jpg'  width='250' height='300'>
 
         Yeah i give up on these problems
 ##### - [Day 22: Sand Slabs ](22_Sand_Slabs.py) 
