@@ -3,7 +3,7 @@
 # Only final solution - for part two is remained
 
 
-with open('Adventofcode/data/input_day_2.txt', 'r') as file:
+with open('Advent_of_code_2023/data/input_day_2.txt', 'r') as file:
     sum_max_cubes: int = 0
 
     for line in file:

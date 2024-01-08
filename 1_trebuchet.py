@@ -66,13 +66,12 @@ def last_match(string: str) -> str:
 
 
 with open(
-    'Adventofcode/data/adventofcode.com_2023_day_1_input.txt', 'r'
+    'Advent_of_code_2023/data/adventofcode.com_2023_day_1_input.txt', 'r'
 ) as file:
 
     sum_digits: int = 0
     for line in file:
         line = line.strip('\n')
         result = first_match(line)+last_match(line)
-        print(result)
         sum_digits += int(result)
     print(sum_digits)

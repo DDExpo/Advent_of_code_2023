@@ -7,7 +7,7 @@ SYMBOLS: set[str] = set(',+-=@!.&$%#/')
 SUM_ENGINE_NUMS: int = 0
 
 
-file = open('Adventofcode/data/input_day_3.txt', 'r').read().splitlines()
+file = open('Advent_of_code_2023/data/input_day_3.txt', 'r').read().splitlines()
 
 
 def traverse_to_end_num(col: int, row: int,

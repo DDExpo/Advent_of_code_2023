@@ -3,7 +3,7 @@
 SUM_WINNING_CARDS: int = 0
 
 
-with open('Adventofcode/data/input_day_4.txt', 'r') as file:
+with open('Advent_of_code_2023/data/input_day_4.txt', 'r') as file:
 
     num_wins: list[int] = [1] * 202
     for i, line in enumerate(file):
